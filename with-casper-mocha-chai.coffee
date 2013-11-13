@@ -5,13 +5,10 @@ describe "Searching Google for 'casperjs'", ->
 
   it "should retrieve 10 or more results", ->
 
-    expectedHomePageTitle = "Google"
-    expectedSearchForm = "form[action=\"/search\"]"
-
     casper.then ->
-      expectedHomePageTitle.should.matchTitle
-      expectedSearchForm.should.be.inDOM.and.be.visible
-      @fill( expectedSearchForm, { q: "casperjs" }, true )
+      "Google".should.matchTitle
+      "form[action=\"/search\"]".should.be.inDOM.and.be.visible
+      @fill( "form[action=\"/search\"]", { q: "casperjs" }, true )
 
     casper.waitForUrl /q=casperjs/, ->
       (/casperjs/).should.matchTitle

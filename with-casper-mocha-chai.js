@@ -6,13 +6,10 @@ describe("Searching Google for 'casperjs'", function() {
 
   it('should retrieve 10 or more results', function() {
 
-    var expectedHomePageTitle = "Google";
-    var expectedSearchForm = "form[action=\"/search\"]";
-
     casper.then(function() {
-      expectedHomePageTitle.should.matchTitle
-      expectedSearchForm.should.be.inDOM.and.be.visible
-      this.fill( expectedSearchForm, { q: 'casperjs' }, true )
+      "Google".should.matchTitle
+      "form[action=\"/search\"]".should.be.inDOM.and.be.visible
+      this.fill( "form[action=\"/search\"]", { q: 'casperjs' }, true )
     })
 
     casper.waitForUrl(/q=casperjs/, function() {
