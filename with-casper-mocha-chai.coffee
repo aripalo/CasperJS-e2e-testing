@@ -7,9 +7,7 @@ describe "Google searching", ->
     casper.then ->
       "Google".should.matchTitle
       "form[action=\"/search\"]".should.be.inDOM.and.be.visible
-      @fill "form[action=\"/search\"]",
-        q: "casperjs"
-      , true
+      @fill( "form[action=\"/search\"]", { q: "casperjs" }, true )
 
     casper.waitForUrl /q=casperjs/, ->
       (/casperjs/).should.matchTitle
