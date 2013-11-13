@@ -17,3 +17,13 @@ You have 2 different ways of testing:
 - CasperJS with [Mocha](http://visionmedia.github.io/mocha/) & [Chai](http://chaijs.com/) via [CasperJS Mocha plugin](https://github.com/nathanboktae/mocha-casperjs) by running `mocha-casperjs with-casper-mocha-chai.coffee`
 
 Also for the sake of example, both CoffeeScript and vanilla JavaScript versions are provided.
+
+## Jenkins CI integration
+
+To integrate these end-to-end tests with Jenkins we use XUnit XML files.
+
+For pure CasperJS, use:
+`casperjs test with-pure-casper.coffee --xunit=xunit.xml`
+
+For CasperJS with Mocha plugin, use:
+`mocha-casperjs --reporter=xunit with-casper-mocha-chai.coffee > xunit.xml`
