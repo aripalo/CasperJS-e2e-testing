@@ -1,6 +1,6 @@
 # CasperJS testing
 
-Examples where we load Google and do a search, then we test if we are on a right results page and did we get enough results.
+Examples of using [CasperJS](http://casperjs.org/) where we load Google and do a search, then we test if we are on a right results page and did we get enough results.
 
 ## Prequisites
 
