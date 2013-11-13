@@ -1,0 +1,15 @@
+{
+  "name": "testing-test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "casper-chai": "~0.2.1",
+    "chai": "~1.8.1",
+    "mocha-casperjs": "~0.3.2",
+    "mocha": "~1.14.0"
+  },
+  "author": "",
+  "license": ""
+}
