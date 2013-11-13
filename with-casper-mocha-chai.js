@@ -8,9 +8,7 @@ describe('Google searching', function() {
     casper.then(function() {
       'Google'.should.matchTitle
       'form[action="/search"]'.should.be.inDOM.and.be.visible
-      this.fill('form[action="/search"]', {
-        q: 'casperjs'
-      }, true)
+      this.fill( 'form[action="/search"]', { q: 'casperjs' }, true )
     })
 
     casper.waitForUrl(/q=casperjs/, function() {
